@@ -1,6 +1,8 @@
+<app-snow />
+
 <div class="mx-auto max-w-[900px] p-8">
-  <h1 class="mb-2 text-3xl font-bold text-slate-800">Angular Demos</h1>
-  <p class="mb-8 text-slate-500">Angular feature demos collection</p>
+  <h1 class="mb-2 text-3xl font-bold text-slate-800 dark:text-slate-100">Angular Demos</h1>
+  <p class="mb-8 text-slate-500 dark:text-slate-400">Angular feature demos collection</p>
 
   <!-- Demo Navigation -->
   <div class="mb-8 flex flex-wrap gap-3">
@@ -15,19 +17,19 @@
   </div>
 
   <!-- View Transitions Demo -->
-  <h2 class="mb-4 text-xl font-semibold text-slate-700">View Transitions</h2>
-  <p class="mb-6 text-sm text-slate-500">Click a card to see the view transition animation</p>
+  <h2 class="mb-4 text-xl font-semibold text-slate-700 dark:text-slate-200">View Transitions</h2>
+  <p class="mb-6 text-sm text-slate-500 dark:text-slate-400">Click a card to see the view transition animation</p>
 
   <div class="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-6">
     @for (photo of photos; track photo.id) {
-      <a class="block cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+      <a class="block cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl dark:bg-slate-800 dark:shadow-slate-900/30"
          [routerLink]="['/detail', photo.id]"
          [style.view-transition-name]="'card-' + photo.id">
         <div class="flex h-[180px] items-center justify-center" [style.background-color]="photo.color">
           <span class="text-6xl">{{ photo.emoji }}</span>
         </div>
         <div class="px-5 py-4">
-          <h3 class="m-0 text-lg font-semibold text-slate-800"
+          <h3 class="m-0 text-lg font-semibold text-slate-800 dark:text-slate-100"
               [style.view-transition-name]="'title-' + photo.id">
             {{ photo.title }}
           </h3>

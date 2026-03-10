@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { SnowComponent } from '../../components/snow/snow.component';
 
 export interface Photo {
   id: number;
@@ -10,7 +11,7 @@ export interface Photo {
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, SnowComponent],
   templateUrl: './home.html',
 })
 export default class Home {
