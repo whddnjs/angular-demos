@@ -1,6 +1,22 @@
 <div class="mx-auto max-w-[900px] p-8">
-  <h1 class="mb-2 text-3xl font-bold text-slate-800">View Transitions Demo</h1>
-  <p class="mb-8 text-slate-500">Click a card to see the view transition animation</p>
+  <h1 class="mb-2 text-3xl font-bold text-slate-800">Angular Demos</h1>
+  <p class="mb-8 text-slate-500">Angular feature demos collection</p>
+
+  <!-- Demo Navigation -->
+  <div class="mb-8 flex flex-wrap gap-3">
+    <a routerLink="/pipes"
+       class="rounded-full bg-indigo-500 px-5 py-2 text-sm font-medium text-white no-underline transition-colors hover:bg-indigo-600">
+      Custom Pipes (31 examples)
+    </a>
+    <a routerLink="/directives"
+       class="rounded-full bg-purple-500 px-5 py-2 text-sm font-medium text-white no-underline transition-colors hover:bg-purple-600">
+      Custom Directives (15 examples)
+    </a>
+  </div>
+
+  <!-- View Transitions Demo -->
+  <h2 class="mb-4 text-xl font-semibold text-slate-700">View Transitions</h2>
+  <p class="mb-6 text-sm text-slate-500">Click a card to see the view transition animation</p>
 
   <div class="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-6">
     @for (photo of photos; track photo.id) {
