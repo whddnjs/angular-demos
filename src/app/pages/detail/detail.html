@@ -1,0 +1,19 @@
+<div class="mx-auto max-w-[700px] p-8">
+  <a routerLink="/" class="mb-6 inline-block font-medium text-indigo-500 no-underline transition-colors hover:text-indigo-600">
+    ← Back to Gallery
+  </a>
+
+  <div class="overflow-hidden rounded-2xl bg-white shadow-lg"
+       [style.view-transition-name]="'card-' + photo().id">
+    <div class="flex h-[300px] items-center justify-center" [style.background-color]="photo().color">
+      <span class="text-7xl">{{ photo().emoji }}</span>
+    </div>
+    <div class="p-8">
+      <h1 class="mb-4 text-3xl font-bold text-slate-800"
+          [style.view-transition-name]="'title-' + photo().id">
+        {{ photo().title }}
+      </h1>
+      <p class="text-lg leading-7 text-slate-600">{{ photo().description }}</p>
+    </div>
+  </div>
+</div>
