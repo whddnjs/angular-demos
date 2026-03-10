@@ -1,176 +1,176 @@
 <div class="mx-auto max-w-[1000px] p-8">
-  <a routerLink="/" class="mb-6 inline-block font-medium text-indigo-500 no-underline transition-colors hover:text-indigo-600">
+  <a routerLink="/" class="mb-6 inline-block font-medium text-indigo-500 no-underline transition-colors hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-300">
     ← Back to Gallery
   </a>
 
-  <h1 class="mb-2 text-3xl font-bold text-slate-800">Custom Pipes Demo</h1>
-  <p class="mb-8 text-slate-500">31 real-world Angular custom pipe examples</p>
+  <h1 class="mb-2 text-3xl font-bold text-slate-800 dark:text-slate-100">Custom Pipes Demo</h1>
+  <p class="mb-8 text-slate-500 dark:text-slate-400">31 real-world Angular custom pipe examples</p>
 
   <div class="grid gap-6 md:grid-cols-2">
 
     <!-- 1. CapitalizeFirst -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#1 capitalizeFirst</h3>
       <p class="mb-3 text-xs text-slate-400">첫 글자 대문자 변환</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ 'hello WORLD' | capitalizeFirst }}
       </code>
     </section>
 
     <!-- 2. TitleCase -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#2 titleCase</h3>
       <p class="mb-3 text-xs text-slate-400">각 단어 첫 글자 대문자</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ 'hello world from angular' | titleCase }}
       </code>
     </section>
 
     <!-- 3. CamelCase -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#3 camelCase</h3>
       <p class="mb-3 text-xs text-slate-400">camelCase로 변환</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ 'hello world pipe' | camelCase }}
       </code>
     </section>
 
     <!-- 4. Reverse -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#4 reverse</h3>
       <p class="mb-3 text-xs text-slate-400">문자열 뒤집기</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ 'Angular' | reverse }}
       </code>
     </section>
 
     <!-- 5. Truncate -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#5 truncate</h3>
       <p class="mb-3 text-xs text-slate-400">텍스트 자르기 (limit: 30)</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ longText | truncate:30 }}
       </code>
     </section>
 
     <!-- 6. Truncate (complete words) -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#6 truncate (completeWords)</h3>
       <p class="mb-3 text-xs text-slate-400">단어 단위로 자르기</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ longText | truncate:30:true }}
       </code>
     </section>
 
     <!-- 7. Excerpt -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#7 excerpt</h3>
       <p class="mb-3 text-xs text-slate-400">발췌문 생성 (limit: 50)</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ longText | excerpt:50 }}
       </code>
     </section>
 
     <!-- 8. Slugify -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#8 slugify</h3>
       <p class="mb-3 text-xs text-slate-400">URL slug 변환</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ 'Hello World! Angular Pipes' | slugify }}
       </code>
     </section>
 
     <!-- 9. Replace -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#9 replace</h3>
       <p class="mb-3 text-xs text-slate-400">문자열 치환</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ 'I love React' | replace:'React':'Angular' }}
       </code>
     </section>
 
     <!-- 10. Repeat -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#10 repeat</h3>
       <p class="mb-3 text-xs text-slate-400">문자열 반복</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ 'Ha' | repeat:3:' ' }}
       </code>
     </section>
 
     <!-- 11. Reverse -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#11 initials</h3>
       <p class="mb-3 text-xs text-slate-400">이니셜 추출</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ 'John William Doe' | initials }}
       </code>
     </section>
 
     <!-- 12. Mask -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#12 mask</h3>
       <p class="mb-3 text-xs text-slate-400">문자 마스킹 (카드번호)</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ cardNumber | mask:4:'*' }}
       </code>
     </section>
 
     <!-- 13. StripHtml -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#13 stripHtml</h3>
       <p class="mb-3 text-xs text-slate-400">HTML 태그 제거</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ htmlString | stripHtml }}
       </code>
     </section>
 
     <!-- 14. SafeHtml -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#14 safeHtml</h3>
       <p class="mb-3 text-xs text-slate-400">HTML 안전하게 렌더링</p>
-      <div class="rounded bg-slate-100 p-3 text-sm" [innerHTML]="'<em>Italic</em> and <strong>Bold</strong>' | safeHtml"></div>
+      <div class="rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200" [innerHTML]="'<em>Italic</em> and <strong>Bold</strong>' | safeHtml"></div>
     </section>
 
     <!-- 15. Highlight -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#15 highlight</h3>
       <p class="mb-3 text-xs text-slate-400">검색어 하이라이트</p>
-      <div class="rounded bg-slate-100 p-3 text-sm" [innerHTML]="'Angular is a platform for building web applications' | highlight:'angular' | safeHtml"></div>
+      <div class="rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200" [innerHTML]="'Angular is a platform for building web applications' | highlight:'angular' | safeHtml"></div>
     </section>
 
     <!-- 16. DefaultValue -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#16 defaultValue</h3>
       <p class="mb-3 text-xs text-slate-400">기본값 제공</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         null → "{{ null | defaultValue:'No data available' }}"
       </code>
     </section>
 
     <!-- 17. TimeAgo -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#17 timeAgo</h3>
       <p class="mb-3 text-xs text-slate-400">상대 시간 표시</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ pastDate | timeAgo }}
       </code>
     </section>
 
     <!-- 18. Countdown -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#18 countdown</h3>
       <p class="mb-3 text-xs text-slate-400">카운트다운 타이머</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ futureDate | countdown }}
       </code>
     </section>
 
     <!-- 19. FileSize -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#19 fileSize</h3>
       <p class="mb-3 text-xs text-slate-400">파일 크기 포맷팅</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         1024 → {{ 1024 | fileSize }}<br>
         1048576 → {{ 1048576 | fileSize }}<br>
         1073741824 → {{ 1073741824 | fileSize }}
@@ -178,38 +178,38 @@
     </section>
 
     <!-- 20. CurrencyConverter -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#20 currencyConverter</h3>
       <p class="mb-3 text-xs text-slate-400">환율 변환</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         $100 → {{ 100 | currencyConverter:1350.5:'KRW' }}<br>
         $100 → {{ 100 | currencyConverter:0.92:'EUR' }}
       </code>
     </section>
 
     <!-- 21. Percentage -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#21 percentage</h3>
       <p class="mb-3 text-xs text-slate-400">퍼센트 계산</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         75/200 → {{ 75 | percentage:200:1 }}
       </code>
     </section>
 
     <!-- 22. Ordinal -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#22 ordinal</h3>
       <p class="mb-3 text-xs text-slate-400">서수 접미사 추가</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ 1 | ordinal }}, {{ 2 | ordinal }}, {{ 3 | ordinal }}, {{ 4 | ordinal }}, {{ 11 | ordinal }}, {{ 21 | ordinal }}
       </code>
     </section>
 
     <!-- 23. Pluralize -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#23 pluralize</h3>
       <p class="mb-3 text-xs text-slate-400">복수형 처리</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ 1 | pluralize:'item' }}<br>
         {{ 5 | pluralize:'item' }}<br>
         {{ 3 | pluralize:'child':'children' }}
@@ -217,37 +217,37 @@
     </section>
 
     <!-- 24. Join -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#24 join</h3>
       <p class="mb-3 text-xs text-slate-400">배열을 문자열로 결합</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         {{ tags() | join:' | ' }}
       </code>
     </section>
 
     <!-- 25. Unique -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#25 unique</h3>
       <p class="mb-3 text-xs text-slate-400">중복 제거</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         [1,2,2,3,3,3,4,5,5] → {{ duplicates | unique | join:', ' }}
       </code>
     </section>
 
     <!-- 26. Flatten -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#26 flatten</h3>
       <p class="mb-3 text-xs text-slate-400">중첩 배열 평탄화</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         [[1,2],[3,[4,5]],[6]] → {{ nestedArray | flatten | join:', ' }}
       </code>
     </section>
 
     <!-- 27. Chunk -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#27 chunk</h3>
       <p class="mb-3 text-xs text-slate-400">배열을 N개씩 분할</p>
-      <div class="rounded bg-slate-100 p-3 text-sm">
+      <div class="rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200">
         @for (group of tags() | chunk:2; track $index) {
           <div>[{{ group | join:', ' }}]</div>
         }
@@ -255,19 +255,19 @@
     </section>
 
     <!-- 28. Range -->
-    <section class="rounded-xl bg-white p-6 shadow-md">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#28 range</h3>
       <p class="mb-3 text-xs text-slate-400">숫자 범위 생성</p>
-      <code class="block rounded bg-slate-100 p-3 text-sm">
+      <code class="block rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200 dark:bg-slate-700 dark:text-slate-200">
         range(1, 10, 2) → {{ 1 | range:10:2 | join:', ' }}
       </code>
     </section>
 
     <!-- 29. GroupBy -->
-    <section class="rounded-xl bg-white p-6 shadow-md md:col-span-2">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30 md:col-span-2">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#29 groupBy</h3>
       <p class="mb-3 text-xs text-slate-400">속성별 그룹핑</p>
-      <div class="rounded bg-slate-100 p-3 text-sm">
+      <div class="rounded bg-slate-100 p-3 text-sm dark:bg-slate-700 dark:text-slate-200">
         @for (entry of fruits | groupBy:'category' | keyvalue; track entry.key) {
           <div class="mb-1">
             <strong>{{ entry.key }}:</strong>
@@ -280,11 +280,11 @@
     </section>
 
     <!-- 30. Filter -->
-    <section class="rounded-xl bg-white p-6 shadow-md md:col-span-2">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30 md:col-span-2">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#30 filter</h3>
       <p class="mb-3 text-xs text-slate-400">배열 필터링</p>
       <input
-        class="mb-3 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none"
+        class="mb-3 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200"
         placeholder="Search fruits..."
         [value]="searchTerm()"
         (input)="updateSearch($event)" />
@@ -296,12 +296,12 @@
     </section>
 
     <!-- 31. Sort -->
-    <section class="rounded-xl bg-white p-6 shadow-md md:col-span-2">
+    <section class="rounded-xl bg-white p-6 shadow-md dark:bg-slate-800 dark:shadow-slate-900/30 md:col-span-2">
       <h3 class="mb-1 text-sm font-bold text-indigo-500">#31 sort</h3>
       <p class="mb-3 text-xs text-slate-400">배열 정렬 (asc / desc)</p>
       <div class="grid grid-cols-2 gap-4">
         <div>
-          <p class="mb-1 text-xs font-semibold text-slate-500">Ascending:</p>
+          <p class="mb-1 text-xs font-semibold text-slate-500 dark:text-slate-400">Ascending:</p>
           <div class="flex flex-wrap gap-1">
             @for (fruit of fruits | sort:'name':'asc'; track fruit.name) {
               <span class="rounded-full bg-blue-100 px-2 py-0.5 text-xs text-blue-700">{{ fruit.name }}</span>
@@ -309,7 +309,7 @@
           </div>
         </div>
         <div>
-          <p class="mb-1 text-xs font-semibold text-slate-500">Descending:</p>
+          <p class="mb-1 text-xs font-semibold text-slate-500 dark:text-slate-400">Descending:</p>
           <div class="flex flex-wrap gap-1">
             @for (fruit of fruits | sort:'name':'desc'; track fruit.name) {
               <span class="rounded-full bg-rose-100 px-2 py-0.5 text-xs text-rose-700">{{ fruit.name }}</span>

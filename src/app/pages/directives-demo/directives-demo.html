@@ -1,33 +1,33 @@
 <div class="mx-auto max-w-[800px] p-6">
-  <a routerLink="/" class="mb-6 inline-block font-medium text-indigo-500 no-underline transition-colors hover:text-indigo-600">
+  <a routerLink="/" class="mb-6 inline-block font-medium text-indigo-500 no-underline transition-colors hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-300">
     ← Back to Home
   </a>
 
-  <h1 class="mb-1 text-3xl font-bold text-slate-800">Custom Directives Demo</h1>
-  <p class="mb-8 text-slate-500">15개의 실전 커스텀 디렉티브 예제</p>
+  <h1 class="mb-1 text-3xl font-bold text-slate-800 dark:text-slate-100">Custom Directives Demo</h1>
+  <p class="mb-8 text-slate-500 dark:text-slate-400">15개의 실전 커스텀 디렉티브 예제</p>
 
   <!-- 1. Highlight Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">1. Highlight Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">마우스를 올리면 배경색이 변경됩니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">1. Highlight Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">마우스를 올리면 배경색이 변경됩니다.</p>
     <p class="cursor-default rounded px-2 py-1 transition-colors" [appHighlight]="'#ffeb3b'">노란색 하이라이트</p>
     <p class="cursor-default rounded px-2 py-1 transition-colors" [appHighlight]="'#81d4fa'">파란색 하이라이트</p>
     <p class="cursor-default rounded px-2 py-1 transition-colors" [appHighlight]="'#a5d6a7'">초록색 하이라이트</p>
   </section>
 
   <!-- 2. Underline Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">2. Underline Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">마우스를 올리면 밑줄이 나타납니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">2. Underline Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">마우스를 올리면 밑줄이 나타납니다.</p>
     <p class="cursor-default px-2 py-1" [appUnderline]="'red'">빨간 밑줄 효과</p>
     <p class="cursor-default px-2 py-1" [appUnderline]="'blue'">파란 밑줄 효과</p>
     <p class="cursor-default px-2 py-1" appUnderline>기본 밑줄 효과 (검정)</p>
   </section>
 
   <!-- 3. Tooltip Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">3. Tooltip Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">마우스를 올리면 툴팁이 표시됩니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">3. Tooltip Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">마우스를 올리면 툴팁이 표시됩니다.</p>
     <div class="flex gap-2">
       <button class="rounded-md bg-indigo-500 px-4 py-2 text-sm text-white transition-colors hover:bg-indigo-600" [appTooltip]="'저장 버튼입니다'">저장</button>
       <button class="rounded-md bg-indigo-500 px-4 py-2 text-sm text-white transition-colors hover:bg-indigo-600" [appTooltip]="'삭제 버튼입니다'">삭제</button>
@@ -36,28 +36,28 @@
   </section>
 
   <!-- 4. Click Outside Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">4. Click Outside Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">드롭다운 외부를 클릭하면 닫힙니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">4. Click Outside Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">드롭다운 외부를 클릭하면 닫힙니다.</p>
     <div class="relative inline-block" (appClickOutside)="dropdownOpen.set(false)">
       <button class="rounded-md bg-indigo-500 px-4 py-2 text-sm text-white transition-colors hover:bg-indigo-600"
               (click)="dropdownOpen.set(!dropdownOpen())">
         드롭다운 {{ dropdownOpen() ? '닫기' : '열기' }}
       </button>
       @if (dropdownOpen()) {
-        <ul class="absolute left-0 top-full z-10 mt-1 min-w-[140px] list-none rounded-lg border border-slate-200 bg-white p-0 py-2 shadow-lg">
-          <li class="cursor-pointer px-4 py-2 hover:bg-slate-100">메뉴 1</li>
-          <li class="cursor-pointer px-4 py-2 hover:bg-slate-100">메뉴 2</li>
-          <li class="cursor-pointer px-4 py-2 hover:bg-slate-100">메뉴 3</li>
+        <ul class="absolute left-0 top-full z-10 mt-1 min-w-[140px] list-none rounded-lg border border-slate-200 bg-white p-0 py-2 shadow-lg dark:border-slate-600 dark:bg-slate-700">
+          <li class="cursor-pointer px-4 py-2 text-slate-800 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-600">메뉴 1</li>
+          <li class="cursor-pointer px-4 py-2 text-slate-800 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-600">메뉴 2</li>
+          <li class="cursor-pointer px-4 py-2 text-slate-800 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-600">메뉴 3</li>
         </ul>
       }
     </div>
   </section>
 
   <!-- 5. Debounce Click Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">5. Debounce Click Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">빠르게 여러 번 클릭해도 300ms 내 마지막 클릭만 처리됩니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">5. Debounce Click Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">빠르게 여러 번 클릭해도 300ms 내 마지막 클릭만 처리됩니다.</p>
     <button class="rounded-md bg-indigo-500 px-4 py-2 text-sm text-white transition-colors hover:bg-indigo-600"
             (appDebounceClick)="onDebounceClick()" [debounceTime]="300">
       클릭하세요
@@ -66,27 +66,27 @@
   </section>
 
   <!-- 6. Lazy Load Image Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">6. Lazy Load Image Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">이미지가 화면에 보일 때 로드됩니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">6. Lazy Load Image Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">이미지가 화면에 보일 때 로드됩니다.</p>
     <img [appLazyLoad]="'https://picsum.photos/400/200?random=1'"
          alt="Lazy loaded image"
          class="h-[200px] w-full max-w-[400px] rounded-lg bg-slate-100 object-cover" />
   </section>
 
   <!-- 7. Auto Focus Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">7. Auto Focus Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">페이지 로드 시 자동으로 포커스됩니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">7. Auto Focus Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">페이지 로드 시 자동으로 포커스됩니다.</p>
     <input appAutoFocus placeholder="자동 포커스된 입력 필드"
-           class="w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/15" />
+           class="w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/15 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200" />
   </section>
 
   <!-- 8. Copy to Clipboard Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">8. Copy to Clipboard Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">클릭하면 텍스트가 클립보드에 복사됩니다.</p>
-    <code class="mr-2 inline-block rounded-md bg-slate-100 px-3 py-2 text-sm">{{ copyText() }}</code>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">8. Copy to Clipboard Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">클릭하면 텍스트가 클립보드에 복사됩니다.</p>
+    <code class="mr-2 inline-block rounded-md bg-slate-100 px-3 py-2 text-sm dark:bg-slate-700 dark:text-slate-200">{{ copyText() }}</code>
     <button class="rounded-md bg-indigo-500 px-4 py-2 text-sm text-white transition-colors hover:bg-indigo-600"
             [appCopyClipboard]="copyText()" (copied)="onCopied($event)">
       복사하기
@@ -97,9 +97,9 @@
   </section>
 
   <!-- 9. Draggable Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">9. Draggable Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">요소를 드래그하여 이동할 수 있습니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">9. Draggable Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">요소를 드래그하여 이동할 수 있습니다.</p>
     <div appDraggable
          class="flex h-20 w-40 select-none items-center justify-center rounded-xl bg-gradient-to-br from-indigo-400 to-purple-600 font-semibold text-white">
       드래그하세요!
@@ -107,22 +107,22 @@
   </section>
 
   <!-- 10. Infinite Scroll Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">10. Infinite Scroll Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">스크롤이 끝에 도달하면 자동으로 더 로드합니다.</p>
-    <div class="h-[200px] overflow-y-auto rounded-lg border border-slate-200"
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">10. Infinite Scroll Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">스크롤이 끝에 도달하면 자동으로 더 로드합니다.</p>
+    <div class="h-[200px] overflow-y-auto rounded-lg border border-slate-200 dark:border-slate-600"
          (appInfiniteScroll)="loadMore()" [scrollThreshold]="50">
       @for (item of scrollItems(); track item) {
-        <div class="border-b border-slate-100 px-4 py-3 text-sm last:border-b-0">{{ item }}</div>
+        <div class="border-b border-slate-100 px-4 py-3 text-sm last:border-b-0 dark:border-slate-700 dark:text-slate-300">{{ item }}</div>
       }
     </div>
   </section>
 
   <!-- 11. Has Permission Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">11. Has Permission Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">사용자 권한에 따라 요소를 표시/숨깁니다.</p>
-    <label class="mb-3 flex cursor-pointer items-center gap-2 text-sm">
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">11. Has Permission Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">사용자 권한에 따라 요소를 표시/숨깁니다.</p>
+    <label class="mb-3 flex cursor-pointer items-center gap-2 text-sm dark:text-slate-300">
       <input type="checkbox" [checked]="userPermissions().includes('admin')"
         (change)="userPermissions.set(
           userPermissions().includes('admin')
@@ -131,27 +131,27 @@
         )" />
       admin 권한
     </label>
-    <div *appHasPermission="'read'; of: userPermissions()" class="mb-2 rounded-lg bg-blue-50 p-3 text-sm">
+    <div *appHasPermission="'read'; of: userPermissions()" class="mb-2 rounded-lg bg-blue-50 p-3 text-sm dark:bg-blue-950 dark:text-blue-200">
       read 권한 필요 콘텐츠
     </div>
-    <div *appHasPermission="'admin'; of: userPermissions()" class="rounded-lg bg-rose-50 p-3 text-sm">
+    <div *appHasPermission="'admin'; of: userPermissions()" class="rounded-lg bg-rose-50 p-3 text-sm dark:bg-rose-950 dark:text-rose-200">
       admin 권한 필요 콘텐츠
     </div>
   </section>
 
   <!-- 12. Character Counter Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">12. Character Counter Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">입력 시 글자 수를 실시간으로 표시합니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">12. Character Counter Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">입력 시 글자 수를 실시간으로 표시합니다.</p>
     <textarea [appCharCounter]="50" placeholder="최대 50자까지 입력하세요" rows="3"
               class="w-full resize-y rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/15"></textarea>
   </section>
 
   <!-- 13. Disable Button Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">13. Disable Button Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">조건에 따라 버튼을 비활성화합니다.</p>
-    <label class="mb-3 flex cursor-pointer items-center gap-2 text-sm">
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">13. Disable Button Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">조건에 따라 버튼을 비활성화합니다.</p>
+    <label class="mb-3 flex cursor-pointer items-center gap-2 text-sm dark:text-slate-300">
       <input type="checkbox" [checked]="isDisabled()" (change)="isDisabled.set(!isDisabled())" />
       버튼 비활성화
     </label>
@@ -160,18 +160,18 @@
   </section>
 
   <!-- 14. Input Trim Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">14. Input Trim Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">포커스를 벗어나면 앞뒤 공백이 자동 제거됩니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">14. Input Trim Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">포커스를 벗어나면 앞뒤 공백이 자동 제거됩니다.</p>
     <input appInputTrim [(ngModel)]="trimValue" placeholder="공백을 포함하여 입력 후 포커스 아웃"
-           class="w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/15" />
-    <p class="mt-2 font-mono text-sm text-slate-500">값: "{{ trimValue() }}"</p>
+           class="w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/15 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200" />
+    <p class="mt-2 font-mono text-sm text-slate-500 dark:text-slate-400">값: "{{ trimValue() }}"</p>
   </section>
 
   <!-- 15. Confirm Action Directive -->
-  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6">
-    <h2 class="mb-1 text-lg font-semibold text-slate-800">15. Confirm Action Directive</h2>
-    <p class="mb-4 text-sm text-slate-400">클릭 시 확인 다이얼로그를 표시합니다.</p>
+  <section class="mb-5 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+    <h2 class="mb-1 text-lg font-semibold text-slate-800 dark:text-slate-100">15. Confirm Action Directive</h2>
+    <p class="mb-4 text-sm text-slate-400 dark:text-slate-500">클릭 시 확인 다이얼로그를 표시합니다.</p>
     <button class="rounded-md bg-indigo-500 px-4 py-2 text-sm text-white transition-colors hover:bg-indigo-600"
             [appConfirmAction]="'정말 삭제하시겠습니까?'" (confirmed)="onConfirmed()">
       삭제하기
